@@ -1,0 +1,42 @@
+.mainBackground {
+    background-color: black;
+    min-height: 100vh;
+    /* width: 100vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.description {
+    width: 30%;
+    margin-right: 5%;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+}
+
+.social a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.social a img {
+    height: 1.5rem;
+    width: 1.5rem;
+    object-fit: scale-down;
+    margin-right: 0.5rem;
+}
+
+.projects {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(3, 1fr);
+}
