@@ -3,3 +3,12 @@ services:
     build: .
     ports:
       - "3000:3000"
+  db:
+    image: couchdb:latest
+    volumes:
+      - ./local.ini:/opt/couchdb/etc/local.d/local.ini
+    ports:
+      - "5984:5984"
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=password
