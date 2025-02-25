@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import styles from './styles.module.css'
+import styles from "./styles.module.css"
 
 export default function Home() {
   return (
@@ -9,13 +9,13 @@ export default function Home() {
             <div className={styles.description}>
                 <h1>Gjermund H. Pedersen</h1>
                 <p>
-                    I'm a student at NTNU Gjøvik doing my bachelor in programming.
+                    I&lsquo;m a student at NTNU Gjøvik doing my bachelor in programming.
                 </p>
                 <p>
-                    I'm the leder of the technical committee at the student union LOGIN. There i manage a team of 10 people and we are responsible for the technical aspects of the student union.
+                    I&lsquo;m the leder of the technical committee at the student union LOGIN. There i manage a team of 10 people and we are responsible for the technical aspects of the student union.
                 </p>
                 <p>
-                    I'm mostly experienced in frontend development, but i also have some experience with backend. I hvave mostly worked with React Native, Typescript and Go. On the backend i have mostly helped with debugging the kubernetis cluster and the backend services.
+                    I&lsquo;m mostly experienced in frontend development, but i also have some experience with backend. I hvave mostly worked with React Native, Typescript and Go. On the backend i have mostly helped with debugging the kubernetis cluster and the backend services.
                 </p>
             </div>
             <div className={styles.social}>
