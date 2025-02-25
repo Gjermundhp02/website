@@ -34,7 +34,7 @@ export default function Home() {
                 </a>
             </div>
         </div>
-        <div className={styles.projects}>
+        {/* <div className={styles.projects}>
             <h1 style={{gridColumn: "1/-1", textAlign: "center"}}>Projects</h1>
             <p>
                 HEllo
@@ -45,7 +45,7 @@ export default function Home() {
             <p>
                 dasadd
             </p>
-        </div>
+        </div> */}
     </div>
   );
 }
