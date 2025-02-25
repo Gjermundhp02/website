@@ -6,6 +6,7 @@ services:
   db:
     image: couchdb:latest
     volumes:
+      - ./db/:/opt/couchdb/data
       - ./local.ini:/opt/couchdb/etc/local.d/local.ini
     ports:
       - "5984:5984"
