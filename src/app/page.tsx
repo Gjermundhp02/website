@@ -1,10 +1,21 @@
 import Image from "next/image";
 import styles from "./styles.module.css"
-import Couchdb from "nano";
+import Couchdb, { RequestError } from "nano";
+import PostCard from "@components/postCard";
 
-export default function Home() {
-    const nano = Couchdb("http://localhost:5984");
-    
+const nano = Couchdb("http://localhost:5984");
+const test = nano.db.use<{ // Use keepalive
+    "title": string,
+    "description_short": string,
+    "text": string,
+    "_attachments": {
+        [key: string]: object
+}}>("test");
+
+export default async function Home() {
+    await nano.auth("website", "mypassword");
+    const posts = await test.list({include_docs: true}) // Use pagination
+    console.log(posts.rows[0].doc);
 
     return (
         <div>
@@ -37,6 +48,9 @@ export default function Home() {
                     </a>
                 </div>
             </div>
+            { posts.rows.map((post) => (
+                <PostCard key={post.id} post={post.doc} />
+            ))}
             {/* <div className={styles.projects}>
                 <h1 style={{gridColumn: "1/-1", textAlign: "center"}}>Projects</h1>
                 <p>

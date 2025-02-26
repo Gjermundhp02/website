@@ -3,6 +3,8 @@ import Couchdb, { RequestError } from "nano";
 const nano = Couchdb("http://localhost:5984");
 const posts = nano.db.use("test");
 
+export const dynamic = 'force-static'
+
 export async function GET(
     req: Request,
     { params }: { params: Promise<{ postId: string, attachmentId: string }>}
